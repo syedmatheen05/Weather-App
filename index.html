@@ -7,17 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="">
-        <input type="text" placeholder="Enter a City Name" required>
+    <form id="weather-form" action="">
+        <input id="city-input" type="text" placeholder="Enter a City Name" required>
         <button type="submit" onclick="">Get Weather</button>
     </form>
-    <div class="weather-card">
-        <h1 class="city-name">Bangalore</h1>
-        <p class="temperature">30° Celcious</p>
-        <p class="humidity">Humidity: 60%</p>
-        <p class="emoji">⛅</p>
-        <p>Please Enter a valid city 🙏</p>
-    </div>
+    <div id="weather-card" class="weather-card" style="display:none">
+        <h1 id="city-name" class="city-name"></h1>
+        <p id="temperature" class="temperature"></p>
+        <p id="humidity" class="humidity"></p>
+        <p id="desc" class="desc"></p>
+        <p id="emoji" class="emoji"></p>
+        <p id="error" class="error"></p>
+    </div>  
 
     <script src="index.js"></script>
 </body>

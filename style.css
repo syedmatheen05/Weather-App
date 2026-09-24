@@ -4,6 +4,7 @@ body{
     flex-direction: column;
     margin: 0;
     align-items: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 input{
     padding: 10px;
@@ -35,10 +36,23 @@ button:hover{
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
     text-align: center;
     min-width:300px ;
-    display: flex;
-    flex-direction: column;
+    margin: 0;
 }
-.temprature{
-    font-size: 3rem;
-
+.temperature, h1{
+    font-size: 2rem;
+    font-weight: bold ;
+    color: hsla(0, 0%, 0%, 0.783);
+}
+.humidity, .desc, .error{
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: hsla(0, 0%, 0%, 0.7);
+    margin: 0;
+}
+.emoji{
+    font-size: 6rem;
+    margin: 0;
+}
+.desc{
+    margin-top: 10px;
 }
