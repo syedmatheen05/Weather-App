@@ -1,7 +1,7 @@
 let weatherForm = document.getElementById("weather-form");
 let cityName = document.getElementById("city-name");
 let temperature = document.getElementById("temperature");
-let humidity = document.getElementById("humidity");
+let humidityDisplay = document.getElementById("humidity");
 let desc = document.getElementById("desc");
 let emoji = document.getElementById("emoji");
 let errorDisplay = document.getElementById("error");
@@ -16,7 +16,6 @@ weatherForm.addEventListener("submit", async event =>{
         displayInfo(weatherData);
     }
     catch(error){
-        card.textContent = "";
         card.style.display = "block";
         errorDisplay.textContent = "Please enter a valid city";
     }
@@ -31,8 +30,32 @@ async function getWeather(city) {
     return response.json();
 }
 function displayInfo(weatherData){
+    // object and array destructing
     const {name: city, main: {temp,humidity}, weather: [{description,id}]} = weatherData;
-    card.textContent="";
+    cityName.textContent = city;
+    temperature.textContent = `${(temp-273.15).toFixed(1)}°C`;
+    humidityDisplay.textContent = `Humidity: ${humidity}`;
+    desc.textContent = description;
+    emoji.textContent = getEmoji(id);
+    card.style.display = "block";
 
+}
+function getEmoji(id){
+    switch(true){
+        case(id >= 200 && id < 300):
+            return "⛈️";
+        case(id >= 300 && id < 600): 
+            return "🌧️";
+        case(id >= 600 && id < 700): 
+            return "🌨️";
+        case(id >= 700 && id < 800): 
+            return "🍃";
+        case(id == 800): 
+            return "☀️";
+        case(id >= 800 && id < 810): 
+            return "☁️";
+        default:
+            return "❔";
+    }
 
 }
