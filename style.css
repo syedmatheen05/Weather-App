@@ -25,13 +25,20 @@ button{
     cursor: pointer;
 }
 button:hover{
-    background-color:hsl(115, 58%, 40%) ;
+    background-color:hsl(115, 58%, 30%) ;
 }
 .weather-card{
-    background-color: hsl(240, 58%, 49%);
+    background: linear-gradient(180deg,hsl(240, 57%, 57%),hsl(120, 33%, 51%));
     border-radius: 5px;
-    padding: 20px 10px;
+    padding: 30px;
     margin: 20px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
     text-align: center;
+    min-width:300px ;
+    display: flex;
+    flex-direction: column;
+}
+.temprature{
+    font-size: 3rem;
 
 }
