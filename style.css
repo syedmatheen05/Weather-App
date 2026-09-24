@@ -1,0 +1,37 @@
+body{
+    background-color: hsl(0, 0%, 80%);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    align-items: center;
+}
+input{
+    padding: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 2px solid hsla(0,0%,20%,0.3);
+    border-radius: 10px;
+    margin: 10px;
+    width: 300px;
+}
+button{
+    font-size: 2rem;
+    background-color:hsl(115, 58%, 35%) ;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover{
+    background-color:hsl(115, 58%, 40%) ;
+}
+.weather-card{
+    background-color: hsl(240, 58%, 49%);
+    border-radius: 5px;
+    padding: 20px 10px;
+    margin: 20px;
+    text-align: center;
+
+}
