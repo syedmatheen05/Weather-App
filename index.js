@@ -6,7 +6,7 @@ let desc = document.getElementById("desc");
 let emoji = document.getElementById("emoji");
 let errorDisplay = document.getElementById("error");
 let card = document.getElementById("weather-card");
-const apiKey="42cc3e9c7e2843e417389734040d8e0d";
+const apiKey="paste your openweather api key here";
 
 weatherForm.addEventListener("submit", async event =>{
     event.preventDefault();
